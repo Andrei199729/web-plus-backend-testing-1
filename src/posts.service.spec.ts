@@ -42,19 +42,15 @@ describe("PostsService", () => {
     };
     const createdPost = postsService.create(newPost);
 
-    // Ищем созданный пост
     const foundPost = postsService.find(createdPost.id);
 
-    // Проверяем, что найденный пост не равен undefined
     expect(foundPost).toBeDefined();
 
     if (foundPost) {
-      // Проверяем, что найденный пост имеет те же свойства, что и созданный
       expect(foundPost.id).toEqual(createdPost.id);
       expect(foundPost.text).toEqual(createdPost.text);
       expect(foundPost.date).toEqual(createdPost.date);
     } else {
-      // Если пост не найден, выдаем ошибку
       throw new Error("Post not found");
     }
   });
