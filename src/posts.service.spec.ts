@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 import { Post, PostsService } from "./posts.service";
 describe("PostsService", () => {
   let postsService: PostsService;
   const post: Omit<Post, "id" | "date"> = {
     text: "Mocked post",
+=======
+import { Post, PostsService } from './posts.service';
+
+describe('PostsService', () => {
+  let postsService: PostsService;
+  const post: Omit<Post, 'id' | 'date'> = {
+    text: 'Mocked post',
+>>>>>>> 5878feff308fa6c70ee3d7185e5e43604b31b2b4
   };
 
   beforeEach(async () => {
     postsService = new PostsService();
 
+<<<<<<< HEAD
     postsService.create({ text: "Some pre-existing post" });
   });
 
@@ -55,3 +65,16 @@ describe("PostsService", () => {
     }
   });
 });
+=======
+    postsService.create({ text: 'Some pre-existing post' });
+  });
+
+  it('should add a new post', () => {
+    // реализуйте тест-кейс
+  });
+
+  it('should find a post', () => {
+    // реализуйте тест-кейс
+  });
+});
+>>>>>>> 5878feff308fa6c70ee3d7185e5e43604b31b2b4
